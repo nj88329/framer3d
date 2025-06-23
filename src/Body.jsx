@@ -42,8 +42,9 @@ const Body = () => {
 
   return (
     <>
-      <motion.div className="w-screen overflow-x-hidden overflow-y-scroll mt-2">
-        <div className="grid grid-cols-6 gap-1 h-full z-0">
+      {/* <motion.div className="w-screen overflow-x-hidden overflow-y-scroll mt-2"> */}
+      <motion.div className="w-full min-h-screen overflow-x-hidden overflow-y-auto mt-2">
+        <div className="grid grid-cols-6 gap-1 z-0">
           {/* Left Component */}
           <motion.div
             className="col-span-1 p-4 text-red-500 rounded-lg shadow-lg shadow-cyan-500/50 border-yellow border-r-2 border-yellow-600 mr-2"
@@ -140,7 +141,7 @@ const Body = () => {
       >
         <div className="h-screen"></div>
       </motion.div>
-      <ThreeD/>
+
     </>
   );
 };

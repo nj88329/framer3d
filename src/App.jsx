@@ -4,13 +4,21 @@ import Body from './Body.jsx'
 import Footer from './Footer.jsx';
 import ThreeD from './Components/ThreeD.jsx';
 import Sphere from './Components/Sphere';
+import  Animation  from './Components/Animation';
+import { Outlet } from 'react-router-dom'; // ✅ This renders the matched route
+
+
 
 function App() {
   return (
     <>
-           <ResponsiveAppBar style={{margin:0}}/>
-                <Body  />
-              <Footer/>
+    <div className="min-h-screen flex flex-col">
+      <ResponsiveAppBar />
+      <main className="flex-grow">
+        <Body />
+      </main>
+      <Footer />
+    </div>
     </>
   )
 }

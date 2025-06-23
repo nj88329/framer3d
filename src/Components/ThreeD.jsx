@@ -94,7 +94,8 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Environment } from '@react-three/drei';
 import * as THREE from 'three';
 import { Suspense, useEffect } from 'react';
- import Sphere from './Sphere' 
+ import Sphere from './Sphere' ;
+ import ScrollComponent from './ScrollComponent';
 
 function SceneModel() {
   const { scene } = useGLTF('/scene.glb');
@@ -144,6 +145,7 @@ export default function ThreeD() {
         {/* Load 3D model */}
         <Suspense fallback={null}>
           {/* <SceneModel /> */}
+          <ScrollComponent/>
            <Sphere/>
         </Suspense>
         {/* Camera controls */}
